@@ -9,6 +9,7 @@ licznik = 0
 #Sczytywanie danych
 inp_o = input("Podaj oceny(po przecinku i spacji): ")
 inp_w = input("Podaj wagi ocen(po przecinku i spacji): ")
+inp_s = input("Podaj próg ocenowy w setnych: ")
 
 print(inp_o.count(","))
 powtu = inp_o.count(",")
@@ -32,8 +33,8 @@ ocena = 0
 srednia_st = str(srednia)
 
 #Zaokrąglanie
-if (srednia - math.floor(srednia)) * 100 >= 60:
-    ocena = srednia + 1
+if (srednia - math.floor(srednia)) * 100 >= inp_s:
+    ocena = smath.ceil(srednia)
 else:
     ocena = math.floor(srednia)
 
